@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>James Triantafylos</title>
+
+		<link rel="stylesheet" type="text/css" href="css/browser_reset.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/typed.js"></script>
+
+		<script type="text/javascript" src="js/navbar-load.js"></script>
+		<script type="text/javascript" src="js/contact-load.js"></script>
+
+		<style>
+			input {
+				margin-bottom: 4px;
+			}
+
+			input[type=submit] {
+				cursor: pointer;
+			}
+
+			textarea {
+				margin: 4px 0px;
+			}
+
+			input, textarea {
+				font-family: 'Fira Mono', monospace;
+				color: #eff1f5;
+				background-color: #2b303b;
+				border: 1px solid #a7adba
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="background-image"></div>
+
+		<div id="navbar">
+			<div id="navbar-left">
+				<a href="index.html">information</a><a href="resume.html">resume</a><a href="compsci.html">comp-sci</a><a href="github.html">github</a><a href="#" class="active">contact</a>
+			</div>
+
+			<div id="navbar-right">
+				<span><span id="time"></span><i class="fa fa-clock-o"></i></span><span><span id="date"></span><i class="fa fa-calendar-o"></i></span>
+			</div>
+
+		</div>
+
+		<div id="content" class="absolute-center">
+			<p class="prompt-upper">
+			<span class="user">james.triantafylos</span><span style="padding: 0px 2px;">@</span><span class="prompt-end">shchs ></span>
+			</p>
+
+			<p>
+			<span class="prompt-lower prompt-end">$ </span>
+			<span id="commandTop"></span>
+			</p>
+
+			<!-- Will ask the page viewer for a name, e-mail, telephone number (optional) and a message which, when submitted, will be passed to mail.php which will using its mail() function will send
+			a formatted e-mail containing the entered data to my e-mail addredd (JTriantafylos@gmail.com).-->
+			<form id="contactForm"  style="visibility: hidden;" action="mail.php" method="post">
+					<span class="important">* Fields are required.</span> <br>
+					<span>Name <span class="important">*</span>:</span> <input type="text" name="name" required/> <br>
+					<span>E-Mail <span class="important">*</span>:</span> <input type="email" name="email" required/> <br>
+					<span>Telephone:</span> <input type="tel" name="telephone"/> <br>
+					<p>Message <span class="important">*</span>:</p><textarea name="message" rows="12" cols="60" required></textarea> <br>
+
+					<input type="submit" value="Send E-Mail"/>
+			</form>
+		</div>
+	</body>
+</html>
